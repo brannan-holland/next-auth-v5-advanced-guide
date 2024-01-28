@@ -12,7 +12,7 @@ const font = Poppins({
 export default function Home() {
   return (
     <main className="flex h-full flex-col items-center justify-center bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-chambray-400 to-chambray-800">
-       <Image src="/pyek_bw_v.png" alt="Logo" width="200" height="200" className="h-auto w-30" />
+       <Image src="/pyek_w_v.png" alt="Logo" width="200" height="200" className="h-auto w-30" />
       <div className="space-y-6 text-center">
         <h1 className={cn(
           "text-6xl font-semibold text-white drop-shadow-md",

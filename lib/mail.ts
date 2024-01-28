@@ -9,7 +9,7 @@ export const sendTwoFactorTokenEmail = async (
   token: string
 ) => {
   await resend.emails.send({
-    from: "mail@auth-masterclass-tutorial.com",
+    from: "mail@pyek.app",
     to: email,
     subject: "2FA Code",
     html: `<p>Your 2FA code: ${token}</p>`
