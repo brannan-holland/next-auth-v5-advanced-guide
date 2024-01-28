@@ -21,6 +21,7 @@ export const UserButton = () => {
   const user = useCurrentUser();
 
   return (
+    <div className="mr-5">
     <DropdownMenu>
       <DropdownMenuTrigger>
         <Avatar>
@@ -39,5 +40,6 @@ export const UserButton = () => {
         </LogoutButton>
       </DropdownMenuContent>
     </DropdownMenu>
+    </div>
   );
 };
