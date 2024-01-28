@@ -3,6 +3,7 @@ import type { NextAuthConfig } from "next-auth";
 import Credentials from "next-auth/providers/credentials";
 import Github from "next-auth/providers/github";
 import Google from "next-auth/providers/google";
+import AzureAd from "next-auth/providers/azure-ad";
 
 import { LoginSchema } from "@/schemas";
 import { getUserByEmail } from "@/data/user";
@@ -16,6 +17,11 @@ export default {
     Github({
       clientId: process.env.GITHUB_CLIENT_ID,
       clientSecret: process.env.GITHUB_CLIENT_SECRET,
+    }),
+    AzureAd({
+      clientId: process.env.AZURE_AD_CLIENT_ID,
+      clientSecret: process.env.AZURE_AD_CLIENT_SECRET,
+      tenantId: process.env.AZURE_AD_TENANT_ID,
     }),
     Credentials({
       async authorize(credentials) {

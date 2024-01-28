@@ -1,5 +1,5 @@
 import { Poppins } from "next/font/google";
-
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const font = Poppins({
@@ -16,11 +16,13 @@ export const Header = ({
 }: HeaderProps) => {
   return (
     <div className="w-full flex flex-col gap-y-4 items-center justify-center">
+            <Image src="/pyek_bw_v.png" alt="Logo" width="200" height="200" className="h-auto w-20" /> 
+
       <h1 className={cn(
-        "text-3xl font-semibold",
+        "text-2xl font-semibold",
         font.className,
       )}>
-        🔐 Auth
+        Pyek Companion
       </h1>
       <p className="text-muted-foreground text-sm">
         {label}
